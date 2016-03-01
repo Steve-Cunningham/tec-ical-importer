@@ -1,3 +1,6 @@
+Updated to work with latest Events Calendar. As always, YMMV. 
+
+
 The Events Calendar - iCalendar Importer
 =======================================
 

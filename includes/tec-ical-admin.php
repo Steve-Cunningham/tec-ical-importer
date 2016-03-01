@@ -112,7 +112,9 @@ class TEC_iCal_Admin {
 				}
 
 				// category slug
-				$input['icals'][$key]['category'] = sanitize_title( $untested_ical['category'] );
+				if ( isset($untested_ical['category']) ) {
+					$input['icals'][$key]['category'] = sanitize_title( $untested_ical['category'] );
+				}
 			}
 		}
 
@@ -144,6 +146,7 @@ class TEC_iCal_Admin {
 			}
 
 			// parse the iCalendars
+
 			$parser  = TEC_iCal_Parser::init( $input['icals'] );
 
 			// get counts from parsed iCals
